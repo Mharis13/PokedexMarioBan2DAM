@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="retroDarkGreen">#0B3D0B</color>
+    <color name="retroLightGreen">#4CAF50</color>
+    <color name="retroGray">#CCCCCC</color>
+    <color name="retroDarkRed">#A10D0D</color>
+    <color name="retroYellow">#F4D03F</color>
+</resources>

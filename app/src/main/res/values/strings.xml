@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PokedexMarioBan2DAM</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="pokemon_name_id">Pokemon Name</string>
+    <string name="shiny_button_id">Shiny Button</string>
+    <string name="pokemon_pokedex_id">Pokedex Number</string>
+    <string name="pokemon_weight_id">Pokemon Weight</string>
+    <string name="pokemon_height_id">Pokemon Height</string>
+    <string name="pokemon_types_id">Pokemon Types</string>
+    <string name="pokemon_sprites_id">Pokemon Sprites</string>
+    <string name="return_button_id">Return Button</string>
+    <string name="pokemon_hp_id">HP Pokemon</string>
+    <string name="pokemon_movements_list_id">Movements Pokemon List</string>
+</resources>
