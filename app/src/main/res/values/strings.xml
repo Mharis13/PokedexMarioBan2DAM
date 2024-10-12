@@ -11,6 +11,8 @@
     <string name="pokemon_pokedex_id">Pokedex Number</string>
     <string name="pokemon_weight_id">Pokemon Weight</string>
     <string name="pokemon_height_id">Pokemon Height</string>
+    <string name="pokemon_types_id2">Pokemon Type2</string>
+
     <string name="pokemon_types_id">Pokemon Types</string>
     <string name="pokemon_sprites_id">Pokemon Sprites</string>
     <string name="return_button_id">Return Button</string>

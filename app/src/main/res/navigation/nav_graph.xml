@@ -12,17 +12,24 @@
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_PokemonDetailsFragment"
+            app:destination="@id/PokemonDetailsFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.pokedexmarioban2dam.SecondFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_second"/>
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+    <fragment
+        android:id="@+id/PokemonDetailsFragment"
+        android:name="com.example.pokedexmarioban2dam.PokemonDetails"
+        android:label="Pokemon Details"
+        tools:layout="@layout/pokemon_details">
+        <argument
+            android:name="pokemon"
+            app:argType="com.example.pokedexmarioban2dam.models.PokemonModel" />
     </fragment>
+
 </navigation>

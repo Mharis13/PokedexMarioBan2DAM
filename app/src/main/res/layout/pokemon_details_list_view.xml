@@ -21,6 +21,7 @@
             android:id="@+id/pokemonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/retroLightGreen"
             android:textSize="16sp"
             android:textStyle="bold"
             android:fontFamily="@font/press_start_2p"
@@ -31,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/press_start_2p"
+            android:textColor="@color/retroLightGreen"
             android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

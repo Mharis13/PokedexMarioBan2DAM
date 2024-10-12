@@ -1,24 +1,21 @@
 package com.example.pokedexmarioban2dam
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.example.pokedexmarioban2dam.databinding.FragmentFirstBinding
-import android.util.Log
-import android.widget.ListView
-import com.example.pokedexmarioban2dam.models.PokemonDTOModel
-import com.example.pokedexmarioban2dam.service.PokemonService
+import com.example.pokedexmarioban2dam.models.PokemonModel
 
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
     private val binding get() = _binding!!
-    private val pokemonService = PokemonService()
-    private val pokemonList = ArrayList<PokemonDTOModel>()
-    private lateinit var listView: ListView
+
+    private val viewModel: FirstFragmentViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,31 +27,23 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        listView = binding.PokemonsList
-        listView.adapter = adapter
-                    pokemon.id,
-                    pokemon.name,
-                    pokemon.sprites
-                )
 
+        val adapter = PokemonDetailsListView(requireContext(), ArrayList())
+        binding.PokemonsList.adapter = adapter
 
-                    Log.d("API", "Sprite:" + sprites.frontDefault)
-                    Log.d("API", "Sprite:" + sprites.frontShiny)
-                }
+        viewModel.pokemonList.observe(viewLifecycleOwner, Observer { list ->
+            adapter.dataSource.clear()
+            adapter.dataSource.addAll(list)
+            adapter.notifyDataSetChanged()
+        })
 
-            }, { error ->
-                Log.e("API", error.toString())
-            })
-
+        if (viewModel.pokemonList.value == null) {
+            viewModel.fetchPokemonList()
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    @SuppressLint("DefaultLocale")
-    private fun formatNumber001(number: Int): String {
-        return String.format("#%03d", number)
     }
 }

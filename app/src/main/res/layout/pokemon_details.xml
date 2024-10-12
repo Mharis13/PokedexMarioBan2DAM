@@ -8,46 +8,76 @@
     android:backgroundTint="@color/retroDarkGreen">
 
     <TextView
-        android:id="@+id/PokemonPokedexId"
+        android:id="@+id/pokemonType2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="300dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/pokemon_types_id2"
+        android:textColor="@color/retroLightGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pokemonPokedexId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="600dp"
         android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_pokedex_id"
         android:textColor="@color/retroLightGreen"
-        app:layout_constraintStart_toEndOf="@id/PokemonSprite"
-        tools:layout_editor_absoluteY="111dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pokemonSprite"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/PokemonSprite"
+        android:id="@+id/pokemonSprite"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/pokemonHP"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="111dp"
+        app:layout_constraintTop_toBottomOf="@+id/returnButton"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/PokemonName"
+        android:id="@+id/pokemonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="500dp"
+        android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_name_id"
         android:textColor="@color/retroLightGreen"
-        app:layout_constraintStart_toEndOf="@+id/PokemonSprite"
-        android:fontFamily="@font/press_start_2p"
-        tools:layout_editor_absoluteY="138dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/PokemonWeight"
+        android:id="@+id/pokemonWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_weight_id"
         android:textColor="@color/retroLightGreen"
-        app:layout_constraintStart_toEndOf="@+id/PokemonSprite"
-        android:fontFamily="@font/press_start_2p"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/shinyButton"
@@ -56,22 +86,26 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:background="@color/retroDarkRed"
-        android:tint="@color/retroGray"
         android:text="@string/shiny_button_id"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonHP"
+        app:tint="@color/retroGray"
         tools:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/PokemonType"
+        android:id="@+id/pokemonType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="400dp"
+        android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_types_id"
         android:textColor="@color/retroLightGreen"
-        app:layout_constraintStart_toEndOf="@+id/PokemonSprite"
-        android:fontFamily="@font/press_start_2p"
-        tools:layout_editor_absoluteY="165dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/returnButton"
@@ -87,15 +121,28 @@
         app:tint="@color/retroGray" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/pokemonHP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_hp_id"
         android:textColor="@color/retroLightGreen"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonSprite" />
+
+    <TextView
+        android:id="@+id/pokemonDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/press_start_2p"
-        app:layout_constraintTop_toBottomOf="@+id/PokemonSprite" />
+        android:text="Pokemon Description"
+        android:textColor="@color/retroLightGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

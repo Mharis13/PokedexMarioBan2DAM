@@ -1,8 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="retroDarkGreen">#0B3D0B</color>
-    <color name="retroLightGreen">#4CAF50</color>
-    <color name="retroGray">#CCCCCC</color>
-    <color name="retroDarkRed">#A10D0D</color>
-    <color name="retroYellow">#F4D03F</color>
+    <!-- Retro Theme Colors -->
+    <color name="retroDarkGreen">#642c34 </color> <!-- Principal color retro oscuro -->
+    <color name="retroLightGreen">#e6d596</color> <!-- Color retro claro -->
+    <color name="retroGray"> #cc322a</color> <!-- Gris retro/marrón oscuro -->
+    <color name="retroDarkRed">#b45c64</color> <!-- Rojo oscuro retro -->
+    <color name="retroYellow">#a7b9d3</color> <!-- Amarillo retro/azul claro -->
+
+    <!-- Background Colors -->
+    <color name="backgroundPrimary">#cc322a</color> <!-- Fondo principal -->
+    <color name="backgroundSecondary">#e6d596</color> <!-- Fondo secundario -->
+
+    <!-- Button Colors -->
+    <color name="buttonNormal">#642c34</color> <!-- Botón normal -->
+    <color name="buttonPressed">#b45c64</color> <!-- Botón presionado -->
+    <color name="buttonFocused">#a7b9d3</color> <!-- Botón enfocado -->
+    <color name="buttonDisabled">#4c3434</color> <!-- Botón deshabilitado -->
+
 </resources>
+
