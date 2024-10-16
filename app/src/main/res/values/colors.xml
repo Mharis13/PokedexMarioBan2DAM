@@ -1,20 +1,25 @@
 <resources>
-    <!-- Retro Theme Colors -->
-    <color name="retroDarkGreen">#642c34 </color> <!-- Principal color retro oscuro -->
-    <color name="retroLightGreen">#e6d596</color> <!-- Color retro claro -->
-    <color name="retroGray"> #cc322a</color> <!-- Gris retro/marrón oscuro -->
-    <color name="retroDarkRed">#b45c64</color> <!-- Rojo oscuro retro -->
-    <color name="retroYellow">#a7b9d3</color> <!-- Amarillo retro/azul claro -->
+    <!-- Colores Principales de la Pokédex -->
+    <color name="pokedexPrimary">#FF6F61</color> <!-- Coral suave: color principal actualizado -->
+    <color name="pokedexSecondary">#D9D7D7</color> <!-- Blanco: color secundario -->
+    <color name="pokedexAccent">#3B4CCA</color> <!-- Azul Pokémon: color de acento -->
+    <color name="pokedexNeutral">#8E8E8EFF</color> <!-- Amarillo pastel: color neutral actualizado -->
 
-    <!-- Background Colors -->
-    <color name="backgroundPrimary">#cc322a</color> <!-- Fondo principal -->
-    <color name="backgroundSecondary">#e6d596</color> <!-- Fondo secundario -->
+    <!-- Variaciones y Complementos -->
+    <color name="pokedexDarkPrimary">#8E8E8EFF</color> <!-- Coral oscuro: variación del primario -->
+    <color name="pokedexDarkAccent">#1A237E</color> <!-- Azul oscuro: variación del acento -->
 
-    <!-- Button Colors -->
-    <color name="buttonNormal">#642c34</color> <!-- Botón normal -->
-    <color name="buttonPressed">#b45c64</color> <!-- Botón presionado -->
-    <color name="buttonFocused">#a7b9d3</color> <!-- Botón enfocado -->
-    <color name="buttonDisabled">#4c3434</color> <!-- Botón deshabilitado -->
+    <!-- Colores de Fondo -->
+    <color name="backgroundPrimary">#B2B1B1</color> <!-- Fondo principal: gris muy claro -->
+    <color name="backgroundSecondary">#E0E0E0</color> <!-- Fondo secundario: gris claro -->
 
+    <!-- Colores de Botones -->
+    <color name="buttonNormal">#FF6F61</color> <!-- Botón normal: coral suave -->
+    <color name="buttonPressed">#CC5A50</color> <!-- Botón presionado: coral oscuro -->
+    <color name="buttonFocused">#3B4CCA</color> <!-- Botón enfocado: azul Pokémon -->
+    <color name="buttonDisabled">#9E9E9E</color> <!-- Botón deshabilitado: gris medio -->
+
+    <!-- Colores de Texto -->
+    <color name="textPrimary">#212121</color> <!-- Texto principal: casi negro -->
+    <color name="textSecondary">#757575</color> <!-- Texto secundario: gris oscuro -->
 </resources>
-

@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     // THE 1 GEN Pokemon
-    private const val BASE_URL = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=121";
+    private const val BASE_URL = "https://pokeapi.co/api/v2/";
 
     val retrofit : Retrofit by lazy {
         Retrofit.Builder()

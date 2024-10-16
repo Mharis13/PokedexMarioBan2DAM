@@ -29,24 +29,30 @@ class FirstFragmentViewModel : ViewModel() {
     }
 
     fun fetchPokemonList() {
-        val currentList = mutableListOf<PokemonModel>()
-        for (i in 1..151) {
-            pokemonService.getPokemon(i.toString(), { pokemon ->
-                val pokemonModel = PokemonModel(
-                    pokemon.id,
-                    pokemon.name,
-                    pokemon.types,  // Pokemon Types
-                    pokemon.weight,
-                    pokemon.stats,  // Pokemon Stats
-                    pokemon.sprites,
+    val currentList = mutableListOf<PokemonModel>()
+    val totalPokemon = 151
+    var fetchedCount = 0
 
-                )
-                currentList.add(pokemonModel)
+    for (i in 1..totalPokemon) {
+        pokemonService.getPokemon(i.toString(), { pokemon ->
+            val pokemonModel = PokemonModel(
+                pokemon.id,
+                pokemon.name,
+                pokemon.types,
+                pokemon.weight,
+                pokemon.stats,
+                pokemon.sprites,
+            )
+            currentList.add(pokemonModel)
+            fetchedCount++
+
+            if (fetchedCount == totalPokemon) {
                 currentList.sortBy { it.id }
                 _pokemonList.postValue(currentList.toList())
-            }, { error ->
-                // Handle error
-            })
-        }
+            }
+        }, { error ->
+            // Handle error
+        })
     }
+}
 }

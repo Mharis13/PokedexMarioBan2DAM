@@ -18,4 +18,7 @@
     <string name="return_button_id">Return Button</string>
     <string name="pokemon_hp_id">HP Pokemon</string>
     <string name="pokemon_movements_list_id">Movements Pokemon List</string>
+    <string name="pokedex">POKEDEX</string>
+    <string name="pokemon_description">Pokemon Description</string>
+    <string name="pokemon_information">POKEMON INFORMATION</string>
 </resources>

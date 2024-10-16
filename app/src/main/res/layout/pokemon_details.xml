@@ -4,41 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/retroDarkGreen"
-    android:backgroundTint="@color/retroDarkGreen">
+    android:background="@color/backgroundPrimary"
+    android:backgroundTint="@color/backgroundSecondary">
 
-    <TextView
+    <ImageView
         android:id="@+id/pokemonType2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="300dp"
-        android:fontFamily="@font/press_start_2p"
-        android:text="@string/pokemon_types_id2"
-        android:textColor="@color/retroLightGreen"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
 
     <TextView
         android:id="@+id/pokemonPokedexId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="600dp"
         android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_pokedex_id"
-        android:textColor="@color/retroLightGreen"
+        android:textColor="@color/textPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/pokemonSprite"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.408" />
 
     <ImageView
         android:id="@+id/pokemonSprite"
+        android:background="#D0D0D0"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginStart="16dp"
@@ -53,59 +54,64 @@
         android:id="@+id/pokemonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="500dp"
         android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_name_id"
-        android:textColor="@color/retroLightGreen"
+        android:textColor="@color/pokedexAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
 
     <TextView
         android:id="@+id/pokemonWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="200dp"
         android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_weight_id"
-        android:textColor="@color/retroLightGreen"
+        android:textColor="@color/pokedexAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.279" />
 
     <ImageButton
         android:id="@+id/shinyButton"
+        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/retroDarkRed"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="24dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/circular_button"
+        android:backgroundTint="@color/buttonFocused"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
         android:text="@string/shiny_button_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonHP"
-        app:tint="@color/retroGray"
         tools:srcCompat="@android:drawable/btn_star_big_on" />
 
-    <TextView
+    <ImageView
         android:id="@+id/pokemonType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="400dp"
-        android:fontFamily="@font/press_start_2p"
-        android:text="@string/pokemon_types_id"
-        android:textColor="@color/retroLightGreen"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pokemonSprite"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
 
     <ImageButton
         android:id="@+id/returnButton"
@@ -113,22 +119,25 @@
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@color/retroDarkRed"
+        android:background="@color/pokedexDarkAccent"
         android:text="@string/return_button_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_arrow_back_ios_new_24"
-        app:tint="@color/retroGray" />
+        app:tint="@color/pokedexSecondary" />
 
     <TextView
         android:id="@+id/pokemonHP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:fontFamily="@font/press_start_2p"
         android:text="@string/pokemon_hp_id"
-        android:textColor="@color/retroLightGreen"
+        android:textColor="@color/pokedexAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pokemonSprite" />
 
@@ -137,11 +146,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/press_start_2p"
-        android:text="Pokemon Description"
-        android:textColor="@color/retroLightGreen"
+        android:text="@string/pokemon_description"
+        android:textColor="@color/pokedexAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251"
+        app:srcCompat="@drawable/outline_anchor_24" />
+
+    <TextView
+        android:id="@+id/pokemonInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="@font/press_start_2p"
+        android:text="@string/pokemon_information"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

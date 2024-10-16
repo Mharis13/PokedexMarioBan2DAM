@@ -3,13 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:padding="8dp"
+    android:background="@color/pokedexSecondary">
 
     <ImageView
         android:id="@+id/pokemonSprite"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:background="#D0D0D0" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -21,18 +23,17 @@
             android:id="@+id/pokemonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/retroLightGreen"
+            android:textColor="@color/pokedexAccent"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:fontFamily="@font/press_start_2p"
-            />
+            android:fontFamily="@font/press_start_2p" />
 
         <TextView
             android:id="@+id/pokemonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/press_start_2p"
-            android:textColor="@color/retroLightGreen"
+            android:textColor="#A39500"
             android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>
