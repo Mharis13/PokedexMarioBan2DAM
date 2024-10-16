@@ -31,7 +31,8 @@ class PokemonDetailsListView(private val context: Context, val dataSource: Array
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view: View = convertView ?: inflater.inflate(R.layout.pokemon_details_list_view, parent, false)
-
+        // Get the pokemon of the position and transport all the data here
+        // and adapter it to the list view
         val pokemonModel = getItem(position) as PokemonModel
         val pokemonDTOModel = PokemonDTOModel(
             pokemonModel.id,
@@ -48,6 +49,8 @@ class PokemonDetailsListView(private val context: Context, val dataSource: Array
 
         Picasso.get().load(pokemonDTOModel.sprites.frontDefault).into(spriteImageView)
 
+
+        // Here we transport all the data to PokemonDetails with Bundle
         view.setOnClickListener {
             val navController = Navigation.findNavController(parent!!)
             val bundle = Bundle()
@@ -57,6 +60,7 @@ class PokemonDetailsListView(private val context: Context, val dataSource: Array
         return view
     }
 
+    // return #001, #010, #100
     private fun formatNumber001(number: Int): String {
         return String.format("#%03d", number)
     }

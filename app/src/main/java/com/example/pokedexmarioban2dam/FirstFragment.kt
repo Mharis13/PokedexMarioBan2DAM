@@ -34,6 +34,8 @@ class FirstFragment : Fragment() {
         val adapter = PokemonDetailsListView(requireContext(), ArrayList())
         binding.PokemonsList.adapter = adapter
 
+
+        // For avoid the connect more times to the API when the app is open
         viewModel.pokemonList.observe(viewLifecycleOwner, Observer { list ->
             if (list.isNotEmpty()) {
                 progressBar.visibility = View.GONE

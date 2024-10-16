@@ -2,7 +2,7 @@ package com.example.pokedexmarioban2dam.models
 
 import com.google.gson.annotations.SerializedName
 import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.Parcelize // For transport the data between fragments
 
 @Parcelize
 data class PokemonModel(
