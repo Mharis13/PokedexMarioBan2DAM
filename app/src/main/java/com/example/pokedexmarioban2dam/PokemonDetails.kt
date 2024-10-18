@@ -109,7 +109,7 @@ class PokemonDetails : Fragment() {
                 binding.pokemonType2.visibility = View.GONE
             }
 
-            binding.pokemonWeight.text = "${pokemon.weight}Kg"
+            binding.pokemonWeight.text = "${pokemon.weight/10}Kg"
             binding.pokemonHP.text = "${pokemon.stats[0].baseStat}HP"
             Picasso.get().load(pokemon.sprites.frontDefault).into(binding.pokemonSprite)
             shinyButton = binding.shinyButton
