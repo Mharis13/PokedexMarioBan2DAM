@@ -136,80 +136,156 @@ class SecondFragment : Fragment() {
         resetFiltersButton.setOnClickListener {
             listTypesFilter.clear()
             listTypesFilter.add("all")
-            pokemonFireTypeButton.isActivated = false
-            pokemonFireTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonWaterTypeButton.isActivated = false
-            pokemonWaterTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonGrassTypeButton.isActivated = false
-            pokemonGrassTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonElectricTypeButton.isActivated = false
-            pokemonElectricTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonGhostTypeButton.isActivated = false
-            pokemonGhostTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonGroundTypeButton.isActivated = false
-            pokemonGroundTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonIceTypeButton.isActivated = false
-            pokemonIceTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonDarkTypeButton.isActivated = false
-            pokemonDarkTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonDragonTypeButton.isActivated = false
-            pokemonDragonTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonFairyTypeButton.isActivated = false
-            pokemonFairyTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonSteelTypeButton.isActivated = false
-            pokemonSteelTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonPoisonTypeButton.isActivated = false
-            pokemonPoisonTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonFightingTypeButton.isActivated = false
-            pokemonFightingTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonFlyingTypeButton.isActivated = false
-            pokemonFlyingTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonRockTypeButton.isActivated = false
-            pokemonRockTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonPsychicTypeButton.isActivated = false
-            pokemonPsychicTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonBugTypeButton.isActivated = false
-            pokemonBugTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
-
-            pokemonNormalTypeButton.isActivated = false
-            pokemonNormalTypeButton.background = ColorDrawable(ContextCompat.getColor(requireContext(),
-                R.color.buttonDisabled))
+            disableAllButtons()
 
         }
 
+    }
+
+    private fun disableAllButtons() {
+        pokemonFireTypeButton.isActivated = false
+        pokemonFireTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonWaterTypeButton.isActivated = false
+        pokemonWaterTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonGrassTypeButton.isActivated = false
+        pokemonGrassTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonElectricTypeButton.isActivated = false
+        pokemonElectricTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonGhostTypeButton.isActivated = false
+        pokemonGhostTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonGroundTypeButton.isActivated = false
+        pokemonGroundTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonIceTypeButton.isActivated = false
+        pokemonIceTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonDarkTypeButton.isActivated = false
+        pokemonDarkTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonDragonTypeButton.isActivated = false
+        pokemonDragonTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonFairyTypeButton.isActivated = false
+        pokemonFairyTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonSteelTypeButton.isActivated = false
+        pokemonSteelTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonPoisonTypeButton.isActivated = false
+        pokemonPoisonTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonFightingTypeButton.isActivated = false
+        pokemonFightingTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonFlyingTypeButton.isActivated = false
+        pokemonFlyingTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonRockTypeButton.isActivated = false
+        pokemonRockTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonPsychicTypeButton.isActivated = false
+        pokemonPsychicTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonBugTypeButton.isActivated = false
+        pokemonBugTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
+
+        pokemonNormalTypeButton.isActivated = false
+        pokemonNormalTypeButton.background = ColorDrawable(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.buttonDisabled
+            )
+        )
     }
 
     private fun handleButtonClick(button: ImageButton, type: String, listTypesFilter: ArrayList<String>) {
