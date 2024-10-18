@@ -21,4 +21,5 @@
     <string name="pokedex">POKEDEX</string>
     <string name="pokemon_description">Pokemon Description</string>
     <string name="pokemon_information">POKEMON INFORMATION</string>
+    <string name="apply">Apply</string>
 </resources>
