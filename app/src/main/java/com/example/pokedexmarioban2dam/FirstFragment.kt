@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.pokedexmarioban2dam.dataBase.PokemonDatabase
 import com.example.pokedexmarioban2dam.databinding.FragmentFirstBinding
+import com.example.pokedexmarioban2dam.repository.PokemonRepository
 
 class FirstFragment : Fragment() {
 
@@ -15,7 +17,11 @@ class FirstFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var progressBar: ProgressBar
 
-    private val viewModel: FirstFragmentViewModel by viewModels()
+    private val viewModel: FirstFragmentViewModel by viewModels{
+        val pokemonDao = PokemonDatabase.getDatabase(requireContext()).pokemonDao()
+        val repository = PokemonRepository(pokemonDao)
+        FirstFragmentViewModelFactory(repository)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,6 +45,7 @@ class FirstFragment : Fragment() {
 
         // For avoid the connect more times to the API when the app is open
         viewModel.pokemonList.observe(viewLifecycleOwner) { list ->
+
             if (list.isNotEmpty()) {
                 progressBar.visibility = View.GONE
                 binding.PokemonsList.visibility = View.VISIBLE
