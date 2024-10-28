@@ -11,4 +11,9 @@ class PokemonRepository(private val pokemonDao: PokemonDao) {
     suspend fun getAllPokemon(): List<PokemonModel> {
         return pokemonDao.getAllPokemon()
     }
+
+
+    suspend fun isDatabaseEmpty(): Boolean {
+        return pokemonDao.getCount() == 0
+    }
 }

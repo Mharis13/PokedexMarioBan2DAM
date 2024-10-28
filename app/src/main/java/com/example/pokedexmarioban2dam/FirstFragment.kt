@@ -43,9 +43,7 @@ class FirstFragment : Fragment() {
             filterList = arrayListOf("all")
         }
 
-        // For avoid the connect more times to the API when the app is open
         viewModel.pokemonList.observe(viewLifecycleOwner) { list ->
-
             if (list.isNotEmpty()) {
                 progressBar.visibility = View.GONE
                 binding.PokemonsList.visibility = View.VISIBLE
@@ -62,8 +60,6 @@ class FirstFragment : Fragment() {
         if (viewModel.pokemonList.value == null) {
             viewModel.fetchPokemonList()
         }
-
-
     }
 
     override fun onDestroyView() {
@@ -71,13 +67,12 @@ class FirstFragment : Fragment() {
         _binding = null
     }
 
-    // Easy filter function. filter by many types
-    private fun filterPokemonList(types : List<String>, adapter: PokemonDetailsListView) {
-        val filteredList = if (types.contains("all")  ) {
+    private fun filterPokemonList(types: List<String>, adapter: PokemonDetailsListView) {
+        val filteredList = if (types.contains("all")) {
             viewModel.pokemonList.value ?: emptyList()
-        } else{
+        } else {
             viewModel.pokemonList.value?.filter { pokemon ->
-                pokemon.types.any {type -> types.contains(type.type.name) }
+                pokemon.types.any { type -> types.contains(type.type.name) }
             } ?: emptyList()
         }
         adapter.dataSource.clear()

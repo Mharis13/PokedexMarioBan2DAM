@@ -14,10 +14,24 @@ class FirstFragmentViewModel(private val repository: PokemonRepository) : ViewMo
 
     private val _pokemonList = MutableLiveData<List<PokemonModel>>()
     private val pokemonService = PokemonService()
-
     val pokemonList: LiveData<List<PokemonModel>> get() = _pokemonList
 
+    init {
+        fetchPokemonList()
+    }
+
     fun fetchPokemonList() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val pokemonFromDb = repository.getAllPokemon()
+            if (pokemonFromDb.isNotEmpty()) {
+                _pokemonList.postValue(pokemonFromDb)
+            } else {
+                fetchPokemonFromApi()
+            }
+        }
+    }
+
+    private fun fetchPokemonFromApi() {
         val currentList = mutableListOf<PokemonModel>()
         val totalPokemon = 151
         var fetchedCount = 0

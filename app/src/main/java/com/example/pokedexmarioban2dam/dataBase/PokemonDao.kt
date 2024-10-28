@@ -13,4 +13,8 @@ interface PokemonDao {
 
     @Query("SELECT * FROM pokemon_table")
     suspend fun getAllPokemon(): List<PokemonModel>
+
+
+    @Query("SELECT COUNT(*) FROM pokemon_table")
+    fun getCount(): Int
 }
